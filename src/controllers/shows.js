@@ -6,7 +6,7 @@ const getShowsList = (req, res) => {
     if (error) {
         return res.status(400)
             .send({
-                "error": error
+                "error": "Could not decode request: JSON parsing failed"
             });
     }
 
