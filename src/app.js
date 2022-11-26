@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const xss = require('xss-clean');
 const helmet = require('helmet');
 const cors = require("cors");
+const router = require("./router");
 const app = express();
 
 // enable cors
@@ -18,5 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(xss());
 
 app.use(bodyParser.json());
+
+app.use(router);
 
 module.exports = app;
