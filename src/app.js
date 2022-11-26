@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const xss = require('xss-clean');
 const helmet = require('helmet');
 const cors = require("cors");
-const router = require("./router");
+const router = require("./routes/router");
 const app = express();
 
 // enable cors
