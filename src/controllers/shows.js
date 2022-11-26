@@ -25,7 +25,7 @@ const getShowsList = (req, res) => {
     }
 
 
-    return res.status(200).send({"message": "success !", "response": data});
+    return res.status(200).send({"response": data});
 
 };
 
