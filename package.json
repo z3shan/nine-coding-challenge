@@ -1,0 +1,19 @@
+{
+  "name": "nine-coding-challenge",
+  "version": "1.0.0",
+  "description": "nine entertainment coding challenge node js ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z3shan/nine-coding-challenge.git"
+  },
+  "author": "zeeshan mirza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/z3shan/nine-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/z3shan/nine-coding-challenge#readme"
+}
