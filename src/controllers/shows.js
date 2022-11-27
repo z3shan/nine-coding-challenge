@@ -1,5 +1,4 @@
 const showSchema = require("../validations/shows.validation");
-const logger = require("../logger");
 const getShowsList = (req, res) => {
 
     try {
@@ -18,7 +17,6 @@ const getShowsList = (req, res) => {
         }
         return res.status(200).send({"response": data});
     } catch (err) {
-        logger.error(err);
         return res.status(400)
             .send({
                 "error": "Could not decode request: JSON parsing failed"
