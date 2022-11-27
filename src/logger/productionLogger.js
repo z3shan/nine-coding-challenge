@@ -22,7 +22,6 @@ const productionLogger = () => {
             // - Write all logs with importance level of `info` or less to `combined.log`
             //
             new transports.Console(),
-            new transports.File({filename: 'error.log'})
         ],
     });
 
