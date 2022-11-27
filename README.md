@@ -38,9 +38,8 @@ cp .env.sample .env
 
 - **Validation**: request data validation using [Joi](https://github.com/hapijs/joi)
 - **Testing**: covered unit tests using [Jest](https://jestjs.io)
-- **API documentation**: with [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) and [swagger-ui-express](https://github.com/scottie1984/swagger-ui-express)
 - **Dependency management**: with [NPM](https://www.npmjs.com/)
-- **Environment variables**: using [dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env#readme)
+- **Environment variables**: using [dotenv](https://github.com/motdotla/dotenv)
 - **Security**: set security HTTP headers using [helmet](https://helmetjs.github.io)
 - **Santizing**: sanitize request data against xss and query injection
 - **CORS**: Cross-Origin Resource-Sharing enabled using [cors](https://github.com/expressjs/cors)
