@@ -3,7 +3,7 @@ const getShowsList = (req, res) => {
 
     try {
         const {body} = req;
-        showSchema.validate(JSON.parse(body));
+        showSchema.validate(body);
         const data = [];
         for (const show of body.payload) {
             if (show.drm && show.episodeCount > 1) {
