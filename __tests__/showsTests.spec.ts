@@ -101,7 +101,7 @@ describe('Nine Entertainment Shows Listing Tests', () => {
                     take: 10,
                     totalRecords: 75
                 });
-               expect(response.body.response).toBeDefined();
+                expect(response.body.response).toBeDefined();
             });
 
         })
@@ -122,6 +122,30 @@ describe('Nine Entertainment Shows Listing Tests', () => {
                 })
                 expect(response.statusCode).toBe(400);
             });
+
+
+            it('should return error object in response', async () => {
+                const response = await request(app).post('/').send({
+                    skip: 0,
+                    take: 10,
+                    totalRecords: 75
+                })
+                expect(response.body).toEqual(expect.objectContaining({
+                    error: expect.any(String)
+                }));
+            });
+
+            it('should return error message in response', async () => {
+                const response = await request(app).post('/').send({
+                    skip: 0,
+                    take: 10,
+                    totalRecords: 75
+                })
+                expect(response.body).toStrictEqual({"error": "Could not decode request: JSON parsing failed"});
+            });
+
+
+
 
         })
 
