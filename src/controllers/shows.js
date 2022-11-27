@@ -15,12 +15,12 @@ const getShowsList = (req, res) => {
                 });
             }
         }
-        return res.status(200).send({"response": data});
+        return res.status(200).json({response: data});
     } catch (err) {
         return res.status(400)
                 .setHeader('Content-Type', 'application/json')
-            .send({
-                "error": "Could not decode request: JSON parsing failed"
+            .json({
+                error: "Could not decode request: JSON parsing failed"
             });
     }
 
