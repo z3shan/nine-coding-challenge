@@ -3,7 +3,7 @@ const getShowsList = (req, res) => {
 
     try {
         const {body} = req;
-        showSchema.validate(body);
+        showSchema.validate(JSON.parse(body));
         const data = [];
         for (const show of body.payload) {
             if (show.drm && show.episodeCount > 1) {
@@ -17,8 +17,8 @@ const getShowsList = (req, res) => {
         }
         return res.status(200).json({response: data});
     } catch (err) {
+
         return res.status(400)
-                .setHeader('Content-Type', 'application/json')
             .json({
                 error: "Could not decode request: JSON parsing failed"
             });
