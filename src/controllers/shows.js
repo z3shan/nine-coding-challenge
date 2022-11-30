@@ -7,7 +7,7 @@ const getShowsList = (req, res) => {
        // JSON.parse(JSON.stringify(body))
         const data = [];
         for (const show of body.payload) {
-            if (show.drm && show.episodeCount > 1) {
+            if (show.drm && show.episodeCount > 0) {
                 data.push({
                     image: show.image,
                     slug: show.slug,
