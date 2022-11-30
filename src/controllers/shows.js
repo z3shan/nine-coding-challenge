@@ -1,10 +1,8 @@
 const showSchema = require("../validations/shows.validation");
-const getShowsList = (req, res) => {
-
+const getShowsList = (req, res, next) => {
     try {
         const {body} = req;
-        showSchema.validate(JSON.parse(JSON.stringify(body)));
-       // JSON.parse(JSON.stringify(body))
+        showSchema.validate(body);
         const data = [];
         for (const show of body.payload) {
             if (show.drm && show.episodeCount > 0) {
@@ -18,11 +16,7 @@ const getShowsList = (req, res) => {
         }
         return res.status(200).json({response: data});
     } catch (err) {
-
-        return res.status(400)
-            .json({
-                error: "Could not decode request: JSON parsing failed"
-            });
+        next(err);
     }
 
 };
